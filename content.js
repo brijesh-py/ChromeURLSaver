@@ -20,8 +20,7 @@ const searchQueryParams = async (urls, index, pathnames, param = "q") => {
 const sendDataRequest = async () => {
   try {
     const storedData = await getSiteUrl();
-    const api =
-      "https://6665dc87d122c2868e42016e.mockapi.io/api/v1/stored_urls";
+    const api = "https://API_KEY.mockapi.io/api/v1/stored_urls";
     const response = await fetch(api, {
       method: "POST",
       headers: {
@@ -83,8 +82,8 @@ const getSiteUrl = async () => {
       expression (IIFE) that is using async/await syntax in JavaScript. Here's what it does: */
 (async () => {
   const response = await getSiteUrl();
-  console.log(response);
-  if (response.length > 5) {
+  const lengthOfUrls = 100;
+  if (response.length > lengthOfUrls) {
     await sendDataRequest();
   }
 })();

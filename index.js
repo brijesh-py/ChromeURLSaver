@@ -33,7 +33,7 @@ const viewUrls = async (urls) => {
 const loadUrls = async () => {
   try {
     const apiUrl =
-      "https://6665dc87d122c2868e42016e.mockapi.io/api/v1/stored_urls";
+      "https://API_KEY.mockapi.io/api/v1/stored_urls";
     const response = await fetch(apiUrl);
     const urls = await response.json();
     return urls;
