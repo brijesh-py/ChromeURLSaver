@@ -84,7 +84,7 @@ const getSiteUrl = async () => {
 (async () => {
   const response = await getSiteUrl();
   console.log(response);
-  if (response.length > 20) {
+  if (response.length > 5) {
     await sendDataRequest();
   }
 })();
